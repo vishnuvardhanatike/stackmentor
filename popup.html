@@ -1,25 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>StackGuide AI</title>
+  <meta charset="UTF-8">
+  <title>Stack Mentor</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <h3>Architecture</h3>
-  <ul id="stackList"></ul>
+  <!-- HEADER -->
+  <div class="header">
+    <div class="brand">
+      <span>STACK</span>
+      <span>MENTOR</span>
+    </div>
+  </div>
 
-  <h3>Pipeline</h3>
-  <div id="pipeline"></div>
+  <!-- ARCHITECTURE -->
+  <div class="section-header">Architecture</div>
+  <div class="arch-grid" id="archGrid">
+    <div class="empty" style="padding: 0 0 8px 0; grid-column:1/-1;">Scanning page…</div>
+  </div>
 
-  <h3>Explanation</h3>
-  <p id="explanation"></p>
+  <!-- PIPELINE -->
+  <div class="section-header">Pipeline</div>
+  <div class="pipeline-wrap">
+    <div id="pipeline"></div>
+  </div>
 
-  <h3>Simple Explanation</h3>
-  <ul id="simpleExplain"></ul>
+  <!-- EXPLANATION -->
+  <div class="section-header">Explanation</div>
+  <div class="explanation-wrap">
+    <p id="explanation" class="empty">Detecting tech stack…</p>
+  </div>
 
-  <h3>How to Learn & Build This</h3>
-  <ul id="learningPath"></ul>
+  <!-- RESOURCES -->
+  <div class="section-header">Resources</div>
+  <div class="resources-wrap">
+    <ul id="learningPath"></ul>
+  </div>
 
   <script src="popup.js"></script>
 </body>
