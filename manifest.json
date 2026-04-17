@@ -1,9 +1,12 @@
 {
   "manifest_version": 3,
-  "name": "Web Stack Explorer",
-  "version": "1.0",
-  "description": "Detects tech stack and shows pipeline",
-  "permissions": ["activeTab", "scripting"],
+  "name": "Disperse-X",
+  "version": "2.0",
+  "description": "Detects tech stack and shows pipeline with Stack Mentor UI",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
   "action": {
     "default_popup": "popup.html"
   }
