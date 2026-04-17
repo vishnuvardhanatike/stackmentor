@@ -1,52 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Exo+2:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family: Arial;
-  padding: 10px;
-  width: 320px;
+  font-family: 'Exo 2', sans-serif;
+  background-color: #0d0f14;
+  color: #c8d6e5;
+  width: 340px;
+  min-height: 400px;
+  padding: 0 0 16px 0;
 }
 
-h3 {
-  margin-top: 12px;
+/* ── HEADER ── */
+.header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 14px 16px 10px;
 }
 
-ul {
-  padding-left: 10px;
+.brand {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: right;
+  color: #7ee8fa;
+  letter-spacing: 2px;
+  text-shadow: 0 0 18px rgba(126,232,250,0.35);
 }
 
-.category {
-  font-weight: bold;
-  margin-top: 8px;
+.brand span {
+  display: block;
 }
 
-.item {
-  margin-left: 12px;
+/* ── SECTION HEADERS ── */
+.section-header {
+  background: #1a1f2e;
+  border: 1px solid #252b3b;
+  border-radius: 6px;
+  padding: 7px 14px;
+  font-family: 'Rajdhani', sans-serif;
   font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: #c8d6e5;
+  text-transform: uppercase;
+  margin: 0 12px 10px;
+}
+
+/* ── ARCHITECTURE ── */
+.arch-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 0 12px;
+  margin-bottom: 14px;
+}
+
+.arch-col {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.arch-col-label {
+  background: #252b3b;
+  border: 1px solid #333c52;
+  border-radius: 5px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #7ee8fa;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  width: fit-content;
+  margin-bottom: 2px;
+}
+
+.arch-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  color: #c8d6e5;
+  font-weight: 500;
+}
+
+/* Tech logo wrapper in arch grid */
+.arch-logo {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #1a1f2e;
+}
+
+.arch-logo svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+/* ── PIPELINE ── */
+.pipeline-wrap {
+  padding: 0 12px;
+  margin-bottom: 14px;
 }
 
 #pipeline {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 10px;
+  gap: 5px;
+  margin-top: 6px;
 }
 
-.box {
-  padding: 6px 10px;
-  background: #4CAF50;
-  color: white;
-  border-radius: 6px;
+.pipe-box {
+  padding: 4px 11px;
+  background: #1e2333;
+  border: 1px solid #333c52;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #c8d6e5;
+  white-space: nowrap;
+}
+
+.pipe-box.active {
+  border-color: #7ee8fa;
+  color: #7ee8fa;
+  background: #152028;
+}
+
+.pipe-arrow {
+  color: #3a4258;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* ── EXPLANATION ── */
+.explanation-wrap {
+  padding: 0 12px;
+  margin-bottom: 14px;
+}
+
+#explanation {
+  margin-top: 8px;
   font-size: 12px;
+  line-height: 1.65;
+  color: #8a9ab5;
+  white-space: pre-line;
 }
 
-.arrow {
-  font-weight: bold;
+/* ── RESOURCES ── */
+.resources-wrap {
+  padding: 0 12px;
 }
 
-a {
-  color: blue;
+#learningPath {
+  list-style: none;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#learningPath li {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+/* Logo in resource list */
+.res-logo {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #1a1f2e;
+}
+
+.res-logo svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+#learningPath li a {
+  font-size: 12px;
+  color: #7ee8fa;
   text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
 }
 
-a:hover {
+#learningPath li a:hover {
+  color: #b2f0fb;
   text-decoration: underline;
+}
+
+/* ── EMPTY STATE ── */
+.empty {
+  font-size: 12px;
+  color: #3a4258;
+  font-style: italic;
+  padding: 4px 0;
 }
